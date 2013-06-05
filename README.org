@@ -24,6 +24,13 @@ This repository provides proxy settings for each individual
 - WANT: a proxy server could provides transparent http proxy.
 - WANT: a proxy server could provides transparent https proxy.
 
+** How-to run
+- put squid.conf to right place
+- mkdir -p /var/cache/squid
+- mkdir -p /var/log/squid
+- chwon nobody:nobody /var/cache/squid
+- chwon nobody:nobody /var/log/squid
+
 ** References
 
 
