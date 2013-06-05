@@ -1,0 +1,32 @@
+* Private Proxy Settings
+
+** Background
+In some companies, http(s) clients need proxy servers
+to access servers outside of a company .
+In some cases, a proxy requires authentication with username/password pairs.
+Some http(s) clients can not access servers via proxies with authentication.
+
+Furthermore, users need to change the passwords in a specific period.
+If we use several machines, we need to adjust the password
+which stored in those machines.
+
+** Purpose
+This repository provides proxy settings for each individual
+- To reduce proxy settings for various http(s) clients.
+- To reduce wasted time to change password.
+
+** Note
+- You need to use this settings with right permissions.
+
+** Requirement
+- MUST: a proxy server in a machine which can be accessed from only localhost.
+- MUST: a proxy server can store a username/password pair for an upstream proxy.
+- WANT: a proxy server could provides transparent http proxy.
+- WANT: a proxy server could provides transparent https proxy.
+
+** References
+
+
+
+
+
