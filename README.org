@@ -25,11 +25,16 @@ This repository provides proxy settings for each individual
 - WANT: a proxy server could provides transparent https proxy.
 
 ** How-to run
-- put squid.conf to right place
-- mkdir -p /var/cache/squid
-- mkdir -p /var/log/squid
-- chwon nobody:nobody /var/cache/squid
-- chwon nobody:nobody /var/log/squid
+- Install squid
+  - eg. brew install squid
+- Put squid.conf to right place
+- %sudo mkdir -p /var/cache/squid/
+- %sudo touch -p /var/log/squid.log
+- %sudo chwon nobody:nobody /var/cache/squid
+- %sudo chwon nobody:nobody /var/log/squid.log
+- Run squid as a daemon
+  - eg. %launchctl load -w /usr/local/Cellar/squid/3.2.7/homebrew.mxcl.squid.plist
+    - 
 
 ** References
 
