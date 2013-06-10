@@ -22,12 +22,13 @@ This repository provides proxy settings for each individual
 - MUST: a proxy server in a machine which can be accessed from only localhost.
 - MUST: a proxy server can store a username/password pair for an upstream proxy.
 - WANT: a proxy server could provides transparent http proxy.
-- WANT: a proxy server could provides transparent https proxy.
+- +WANT: a proxy server could provides transparent https proxy.+
 
 ** How-to run
 - Install squid
   - eg. brew install squid
 - Put squid.conf to right place
+  - eg. cp squid.conf /usr/local/Celler/squid/3.2.7/etc/
 - %sudo mkdir -p /var/cache/squid/
 - %sudo touch -p /var/log/squid.log
 - %sudo chwon nobody:nobody /var/cache/squid
