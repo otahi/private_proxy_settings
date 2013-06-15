@@ -25,21 +25,21 @@ This repository provides proxy settings for each individual
 
 ** How-to run
 - Install squid
-  - eg[mac]. %brew install squid
-  - eg[cygwin]. %apt-cyg install squid
+  - eg[mac   ]. =%brew install squid=
+  - eg[cygwin]. =%apt-cyg install squid=
 - Put squid.conf to right place
-  - eg[mac]. % cp squid.conf /usr/local/etc/
-  - eg[cygwin]. % cp squid.conf /etc/
-- %sudo mkdir -p /var/cache/squid/
-- %sudo touch -p /var/log/squid.log
-- %sudo chwon nobody:nobody /var/cache/squid
-- %sudo chwon nobody:nobody /var/log/squid.log
+  - eg[mac   ]. =%cp squid.conf /usr/local/etc/=
+  - eg[cygwin]. =%cp squid.conf /etc/=
+- =%sudo mkdir -p /var/cache/squid/=
+- =%sudo touch -p /var/log/squid.log=
+- =%sudo chwon nobody:nobody /var/cache/squid=
+- =%sudo chwon nobody:nobody /var/log/squid.log=
 - Create cache directory
-  - eg[mac]. % /usr/local/sbin/squid -z
-  - eg[cygwin]. % /usr/bin/squid -z
+  - =eg[mac   ]. %sudo /usr/local/sbin/squid -z=
+  - =eg[cygwin]. %/usr/bin/squid -z=
 - Run squid
-  - eg[mac]. % /usr/local/sbin/squid
-  - eg[cygwin]. % /usr/bin/squid
+  - eg[mac   ]. =%sudo /usr/local/sbin/squid=
+  - eg[cygwin]. =%/usr/bin/squid=
 - TODO Run squid as a daemon...
 
 ** References
