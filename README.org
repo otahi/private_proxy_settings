@@ -4,38 +4,43 @@
 In some companies, http(s) clients need proxy servers
 to access servers outside of a company .
 In some cases, a proxy requires authentication with username/password pairs.
-Some http(s) clients can not access servers via proxies with authentication.
+Some http(s) clients can not use proxy servers with authentications.
 
-Furthermore, users need to change the passwords in a specific period.
-If we use several machines, we need to adjust the password
+Furthermore, some users need to change the passwords in a specific period.
+If users have several machines, users need to adjust the password
 which stored in those machines.
 
 ** Purpose
 This repository provides proxy settings for each individual
 - To reduce proxy settings for various http(s) clients.
-- To reduce wasted time to change password.
+- To reduce wasted time to change proxy passwords.
 
 ** Note
 - You need to use this settings with right permissions.
 
-** Requirement
-- MUST: a proxy server in a machine which can be accessed from only localhost.
-- MUST: a proxy server can store a username/password pair for an upstream proxy.
-- WANT: a proxy server could provides transparent http proxy.
-- +WANT: a proxy server could provides transparent https proxy.+
+** Specs
+- a proxy server provides proxy service for only localhost/hostonlynetwork.
+- a proxy server stores a username/password pair for an upstream proxy.
+- a proxy server uses upstream proxy for the Internet access.
 
 ** How-to run
 - Install squid
-  - eg. brew install squid
+  - eg[mac]. %brew install squid
+  - eg[cygwin]. %apt-cyg install squid
 - Put squid.conf to right place
-  - eg. cp squid.conf /usr/local/Celler/squid/3.2.7/etc/
+  - eg[mac]. % cp squid.conf /usr/local/etc/
+  - eg[cygwin]. % cp squid.conf /etc/
 - %sudo mkdir -p /var/cache/squid/
 - %sudo touch -p /var/log/squid.log
 - %sudo chwon nobody:nobody /var/cache/squid
 - %sudo chwon nobody:nobody /var/log/squid.log
-- Run squid as a daemon
-  - eg. %launchctl load -w /usr/local/Cellar/squid/3.2.7/homebrew.mxcl.squid.plist
-    - 
+- Create cache directory
+  - eg[mac]. % /usr/local/sbin/squid -z
+  - eg[cygwin]. % /usr/bin/squid -z
+- Run squid
+  - eg[mac]. % /usr/local/sbin/squid
+  - eg[cygwin]. % /usr/bin/squid
+- TODO Run squid as a daemon...
 
 ** References
 
