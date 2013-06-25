@@ -6,14 +6,13 @@ to access servers outside of a company .
 In some cases, a proxy requires authentication with username/password pairs.
 Some http(s) clients can not use proxy servers with authentications.
 
-Furthermore, some users need to change the passwords in a specific period.
-If users have several machines, users need to adjust the password
-which stored in those machines.
-
 ** Purpose
-This repository provides proxy settings for each individual
-- To reduce proxy settings for various http(s) clients.
-- To reduce wasted time to change proxy passwords.
+This repository provides proxy settings 
+to reduce proxy settings for various http(s) clients.
+
+#+ATTR_HTML: alt="layout. proxy can use upstrem proxy" width="100%"
+[[./images/layout.svg]]
+
 
 ** Note
 - You need to use this settings with right permissions.
@@ -38,9 +37,8 @@ This repository provides proxy settings for each individual
     - =%cp squid.conf /usr/local/etc/=
   - eg[cygwin].
     - =%cp squid.conf /etc/=
-- Create a directory and a file
+- Create a directory 
   - =%sudo mkdir -p /var/cache/squid/=
-  - =%sudo touch -p /var/log/squid.log=
 - Change owner a directory and a file for nobody
   - =%sudo chwon nobody:nobody /var/cache/squid=
   - =%sudo chwon nobody:nobody /var/log/squid.log=
@@ -54,10 +52,16 @@ This repository provides proxy settings for each individual
     - =%sudo /usr/local/sbin/squid=
   - eg[cygwin].
     - =%/usr/bin/squid=
-- TODO Run squid as a daemon...
+- Run squid as a daemon
+  - eg[mac].
+    - =%sudo /usr/local/sbin/squid -k shutdown=
+    - =%sudo install -oroot -gwheel squid.plist /Library/LaunchDaemons/=
+    - =%sudo launchctl load /Library/LaunchDaemons/squid.plist=
+  - eg[cygwin].
+    - TODO check cygserver
 
 ** References
-
+-[[http://www.squid-cache.org/Doc/config/][Squid configuration directives]]
 
 
 

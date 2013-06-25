@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>KeepAlive</key>
+  <true/>
+  <key>Label</key>
+  <string>squid</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/usr/local/opt/squid/sbin/squid</string>
+    <string>-N</string>
+    <string>-d 1</string>
+    <string>-D</string>
+  </array>
+  <key>RunAtLoad</key>
+  <true/>
+  <key>UserName</key>
+  <string>nobody</string>
+  <key>WorkingDirectory</key>
+  <string>/var</string>
+</dict>
+</plist>
