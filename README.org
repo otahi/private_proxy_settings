@@ -11,7 +11,7 @@ This repository provides proxy settings
 to reduce proxy settings for various http(s) clients.
 
 #+ATTR_HTML: alt="layout. proxy can use upstrem proxy" width="100%"
-[[./images/layout.svg]]
+[[./images/layout.png]]
 
 
 ** Note
