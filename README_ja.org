@@ -1,26 +1,25 @@
 * Private Proxy Settings
 
 ** Background
-In some companies, http(s) clients need proxy servers
-to access servers outside of a company .
-In some cases, a proxy requires authentication with username/password pairs.
-Some http(s) clients can not use proxy servers with authentications.
+いくつかの企業ではproxyサーバ経由でhttp(s)クライアントが
+企業の外にあるサーバにアクセスする必要がある。
+場合によっては、proxyサーバはusername/passwordの認証を要求する。
+http(s)クライアントによっては、認証ありのproxyサーバを使えない場合もある。
 
 ** Purpose
-This repository provides proxy settings 
-to reduce proxy settings for various http(s) clients.
+このrepositoryでは複数のhttp(s)クライアントのproxy設定を削減するためのproxy設定を提供する。
 
 #+ATTR_HTML: alt="layout. proxy can use upstrem proxy" width="100%"
 [[./images/layout.png]]
 
 
 ** Note
-- You need to use this settings with right permissions.
+- 権限に従って設定してください
 
 ** Specs
-- a proxy server provides proxy service for only localhost/hostonlynetwork.
-- a proxy server stores a username/password pair for an upstream proxy.
-- a proxy server uses upstream proxy for the Internet access.
+- proxyサーバはlocalhost/hostonlynetworkにのみサービスを提供する
+- proxyサーバは上流proxyサーバのusername/passwordのペアを保持する
+- proxyサーバはインターネットへのアクセスに上流proxyサーバを使う
 
 ** How-to run
 - Git clone
@@ -59,8 +58,9 @@ to reduce proxy settings for various http(s) clients.
     - =%sudo launchctl load /Library/LaunchDaemons/squid.plist=
   - eg[cygwin].
     - TODO check cygserver
+
 ** How-to use a proxy server
-Set envirionment variables or browser settings.
+Set envirionment variables or browser settings
 *** set environment variables for the proxy(for local application)
 eg.
 #+BEGIN_SRC
@@ -81,6 +81,7 @@ export http_proxy=$HTTP_PROXY
 export https_proxy=$HTTP_PROXY
 export ftp_proxy=$HTTP_PROXY
 #+END_SRCexport HTTP_PROXY=localhost:3128
+
 
 ** References
 -[[http://www.squid-cache.org/Doc/config/][Squid configuration directives]]
